@@ -53,27 +53,20 @@
 
 /** Globals
  **************************************************************** **/
-
- html, body {
+html, body {
 	height:100%;
 	direction: ltr;
 }
 body {
 	color:#666;
 	background-color:#fff;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'roboto';
 	-webkit-font-smoothing: antialiased;
 
 	font-size:16px; line-height:1.5;
 	margin:0; padding:0;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-
-  mobile11{
-  display: none;
-}
-}
 
 /* example usage: index-onepage-youtube.html */
 body.has-image-bg section,
@@ -94,7 +87,7 @@ body.bg-grey #wrapper {
 section {
 	display: block;
 	position: relative;
-	padding: 20px 0;
+	padding: 100px 0;
 	border-bottom:rgba(0,0,0,0.1) 1px solid;
 	background-color: #fff;
 
@@ -372,7 +365,7 @@ section header>h6 {
 }
 
 small { 
-	font-family: 'Lato', sans-serif; 
+	font-family: 'roboto';
 }
 label {
 	display:block;
@@ -464,14 +457,14 @@ section.dark h6.page-header {
 
 /* fonts */
 .font-open-sans {
-	font-family:'Open Sans',Arial,Helvetica,sans-serif !important;
+	font-family:'roboto' !important;
 }
 .font-lato {
 	font-weight:300;
-	font-family:'Lato',Arial,Helvetica,sans-serif !important;
+	font-family:'roboto' !important;
 }
 .font-raleway {
-	font-family:'Raleway',Arial,Helvetica,sans-serif !important;
+	font-family:'roboto' !important;
 }
 
 
@@ -3597,6 +3590,8 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 		}
 	}
 
+
+
 	/* Mega Menu */
 	#topNav #topMain>li.mega-menu {
 	  position: inherit;
@@ -4746,7 +4741,7 @@ svg {
     border-radius: 3px;
     background: #292929;
     color: white;
-    font-family: sans-serif, Verdana;
+    font-family: 'roboto';
     font-size: smaller;
     padding: 3px;
 }
@@ -6972,7 +6967,7 @@ section#slider:not(.custom-form) .btn-default {
 		display:inline-block;
 		color: #fff;
 		background-color:rgba(0,0,0,0.7);
-		font-family:'Lato',Arial,Helvetica,sans-serif;
+		font-family:'roboto';
 		font-weight:300;
 		padding: 6px 15px 8px 15px;
 		opacity: 1;
@@ -7022,7 +7017,7 @@ section#slider:not(.custom-form) .btn-default {
 		list-style: none;
 	}
 	.camera_caption {
-		font-family:'Lato',Arial,Helvetica,sans-serif;
+		font-family:'roboto';
 		font-size:22px;
 		font-weight:300;
 	}
@@ -7055,7 +7050,7 @@ section#slider:not(.custom-form) .btn-default {
 	.ei-title h3 {
 		font-size: 60px;
 		line-height: 60px;
-		font-family: 'Open Sans', sans-serif;
+		font-family:'roboto';
 		text-transform: uppercase;
 		font-weight:300;
 		color: #fff;
@@ -7285,7 +7280,7 @@ section#slider:not(.custom-form) .btn-default {
 		font-size:90px;
 		line-height:90px;
 		margin:0;
-		font-family:Arial,Helvetica,sans-serif;
+		font-family:'roboto';
 	}
 	#slider div.slider-featured-text h2 {
 		text-shadow:#333 1px 1px 3px;
@@ -7934,7 +7929,7 @@ section.dark #portfolio h3 {
 h1.blog-post-title,
 .blog-post-item h2 {
 	letter-spacing:0;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'roboto';
 	font-size:22px;
 	margin-bottom:10px;
 }
@@ -8133,7 +8128,7 @@ h1.blog-post-title {
 	}
 .comments small {
 	font-size:12px;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'roboto';
 	color:#aaa;
 }
 .comments h4 {
@@ -8354,7 +8349,7 @@ li.comment a.comment-author span {
 	line-height:1;
 	color:#ccc;
 	font-weight:bold;
-	font-family:'Lato','Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'roboto';
 }
 .timeline .timeline-entry>.timeline-vline {
 	position: absolute;
@@ -8379,7 +8374,7 @@ li.comment a.comment-author span {
 	font-size:13px;
 	text-transform:uppercase;
 	font-weight:300;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'roboto';
 }
 section.alternate .timeline .timeline-entry {
 	background-color:#F9F9F9;
@@ -8590,7 +8585,7 @@ section.dark .error-404 {
 	padding: 20px;
 	margin-top: 10%;
 	background-color: rgba(0,0,0,0.05);
-	font-family:'Open Sans';
+	font-family:'roboto';
 	font-size:14px; 
 	line-height:23px;
 	text-align: center;
@@ -9045,7 +9040,7 @@ section.dark-2 div.category-grid .card {
 	}
 	#footer ul.footer-list li small {
 		display:block;
-		font-family:'Open Sans',Arial,Helvetica,sans-serif;
+		font-family:'roboto';
 		color:#ddd;
 	}
 		#footer.footer-light ul.footer-list li small {
