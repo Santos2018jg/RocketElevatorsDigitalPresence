@@ -5,49 +5,45 @@
     width: 100%;
 }
 
-
-
-
 .mg-left {
 
 	margin-left: 200px;
 }
 
 .border01{
-    float: left;
+   float: left;
 	border: 1px solid black;
 	padding: 15px;
-	width: 50%;
-    height: 54px;
-
+	width: 40%;
+  height: 54px;
+  
 }
 
 .border02{ 
-    width: 50px;
+  width: 50px;
 	margin-left: 15px;
 	text-align: center;
 	height: 54px;
 	border: 1px solid black;
 }
 
-.width100{
-	width: 100%;
+#residential{
+  margin-bottom: 50px;
+}
+
+.tpBuilding{
+  margin-bottom: 50px;
+}
+
+.residential01{
+  margin-bottom: 10px;
 }
 
 
-.tiere{
-  width: 33%;
- 
-}
 
-.product-desc{
-    width: 30%;
-   
-}
 
-.product-desc img{
-  border: 1px solid #c8c8c8;
-}
+
+
 
 .bouton{
   text-decoration: none;
@@ -60,15 +56,6 @@
 .bouton:hover{
   background-color: darkgray;
 }
-
-
-h1{
-  display: block;
-  color: #1490C4;
-  margin: 15px 0;
-  font-size: 40px;
-}
-
 
 
 button{
