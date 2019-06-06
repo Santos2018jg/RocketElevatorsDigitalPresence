@@ -174,17 +174,18 @@
 			<div class="mg-left tpBuilding" >
 				<label for="typeBuilding">What type of building do you have?</label>
 				<select id="typeBuilding">
-					<option value="residential" > Residential</option>
-					<option value="commercial">Commercial</option>
-					<option value="corporate">Corporate</option>
-					<option value="hybrid">Hybrid</option>
+					<option value="None" > -- Select --</option>
+					<option value="Residential" >Residential</option>
+					<option value="Commercial">Commercial</option>
+					<option value="Corporate">Corporate</option>
+					<option value="Hybrid">Hybrid</option>
 				</select>
 			</div>
 
 			<form class="mg-left">
-				<input type="radio" name="building" value="standard"> Standard<br>
-				<input type="radio" name="building" value="premium"> Premium<br>
-				<input type="radio" name="building" value="excelium"> Excelium<br>  
+				<input type="radio" name="building" value="standard" onclick="checkRadiovalue()" checked>Standard<br>
+				<input type="radio" name="building" value="premium" onclick="checkRadiovalue()">Premium<br>
+				<input type="radio" name="building" value="excelium" onclick="checkRadiovalue()">Excelium<br>
 			</form> 
 
 
@@ -545,6 +546,7 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
+		<script src="assets/js/quote.js"></script>
 		
 		<!-- STYLESWITCHER - REMOVE -->
 		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>

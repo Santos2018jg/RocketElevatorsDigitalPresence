@@ -41,12 +41,7 @@
 	window.height 	= jQuery(window).height();
 
 
-//Formulaire Soumission
 
-
-
-
-// Fin formulaire Soumission
 
 
 
