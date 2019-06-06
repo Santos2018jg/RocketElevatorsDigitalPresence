@@ -77,20 +77,7 @@
 /**	01. Resets
 *************************************************** **/
 
-.photo{
-	width:  387px;
-	height: 194px;
-}
 
-.photo01{
-	width: 265px;
-	height: 176px;
-}
-
-.photo02{
-	width: 265px;
-	height: 77px;
-}
 
 
 button::-moz-focus-inner, 
