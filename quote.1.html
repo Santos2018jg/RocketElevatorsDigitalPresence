@@ -182,39 +182,32 @@
 				</select>
 			</div>
 
-			<form class="mg-left">
-				<input type="radio" name="building" value="standard" onclick="checkRadiovalue()" checked>Standard<br>
-				<input type="radio" name="building" value="premium" onclick="checkRadiovalue()">Premium<br>
-				<input type="radio" name="building" value="excelium" onclick="checkRadiovalue()">Excelium<br>
-			</form> 
-
 			<!-- Residential -->
-
 			<div id="residential" class="mg-left mg-bottom">
 				<div class="mg-bottom">
 					<h3>Residential</h3>
 					<div class="border01">
 						<p>How many apartments? *</p>
 					</div>
-					<input id="numberApp" name="numberApp" class="border02" type="number"  min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberApp" name="numberApp" class="border02 residentialInput" type="number"  min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 
 				</div>
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>How many floor? </p>
 					</div>
-					<input id="numberFloor" name="numberFloor" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberFloor" name="numberFloor" class="border02 residentialInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 
 				</div>
 
 				<div>
 					<p  class="border01">How many basement? *</p>
-					<input id="numberBas" name="numberBas" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberBas" name="numberBas" class="border02 residentialInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 			</div>
+			<!-- Residential -->
 
-			<!-- Commercial -->
-			
+			<!-- Commercial -->			
 			<div id="commercial" class="mg-left tpBuilding">
 				<div class="mg-bottom">
 					<h3>Commercial</h3>
@@ -251,84 +244,137 @@
 					<input id="numberCag" name="numberCag" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 			</div>
+			<!-- Commercial -->
 
-			<!-- Corporate -->
-			
+			<!-- Corporate -->			
 			<div id="corporate" class="mg-left tpBuilding">
 				<div class="mg-bottom">
 					<h3>Corporate</h3>
 					<div class="border01">
 						<p>How Many separate tenant companies? *?</p>
 						</div>
-						<input id="numbTen" name="numberTen" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+						<input id="numbTen" name="numberTen" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 					</div>
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>How many floor? *</p>
 					</div>
-					<input id="numberFloor02" name="numberFloor02" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberFloor02" name="numberFloor02" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>How many basement? *</p>
 					</div>
-					<input id="numberBas02" name="numberBas02" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberBas02" name="numberBas02" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>How Many Parking? *</p>
 					</div>
-					<input id="numberPar01" name="numberPar01" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberPar01" name="numberPar01" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>What Is The Maximum Number Of Occupants Per Floor? *</p>
 					</div>
-					<input id="numberOcc" name="numberOcc" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberOcc" name="numberOcc" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 			</div>
+			<!-- Corporate -->
 
-			<!-- Hybrid  -->
-			
+			<!-- Hybrid  -->			
 			<div id="hybrid" class="mg-left tpBuilding">
 				<div class="mg-bottom">
 					<h3>Hybrid</h3>
 					<div class="border01">
 						<p>How Many Separate Businesses? *?</p>
 						</div>
-						<input id="numberBus01" name="numberBus01" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+						<input id="numberBus01" name="numberBus01" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 					</div>
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>How many floor? *</p>
 					</div>
-					<input id="numberFloor02" name="numberFloor02" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberFloor03" name="numberFloor03" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>How many basement? *</p>
 					</div>
-					<input id="numberBas02" name="numberBas02" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberBas03" name="numberBas03" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 
 				<div class="mg-bottom">
 					<div class="border01">
 						<p>How Many Parking? *</p>
 					</div>
-					<input id="numberPar01" name="numberPar01" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberPar01" name="numberPar01" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
 
 				<div class="mg-bottom">
 					<div class="border01">
-						<p>What Is The Maximum Number Of Occupants Per Floor? *</p>
+						<p>numberOcc01? *</p>
 					</div>
-					<pss="pf id="numberOcc01" name="numberOcc01" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+					<input id="numberOcc01" name="numberOcc01" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
 				</div>
+
+				<div class="mg-bottom">
+					<div class="border01">
+						<p>H24hing? *</p>
+					</div>
+					<input id="numberhr" name="numberhr" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+				</div>
+
 			</div>
+			<!-- Hybrid  -->
+
+			<!-- cageElevators  -->			
+			<div class="mg-left tpBuilding">
+				<div class="mg-bottom">					
+					<div class="border01">
+						<p>cage Elevators</p>
+						</div>
+						<input id="cageElevators" name="numberBus01" class="border02" type="number" min="0" max="10000" disabled="true">
+					</div>
+			</div>
+			<!-- cageElevators  -->
+			
+			<!-- radio button  -->
+			<form class="mg-left">
+				<input type="radio" name="building" value="standard" id="standard" >Standard<br>
+				<input type="radio" name="building" value="premium" id="premium" >Premium<br>
+				<input type="radio" name="building" value="excelium" id="excelium" >Excelium<br>
+			</form> 
+			<!-- radio button  -->
+
+			<!-- taxa  -->			
+			<div class="mg-left tpBuilding">
+				<div class="mg-bottom">					
+					<div class="border01">
+						<p>taxa</p>
+						</div>
+						<input id="taxa" name="numberBus01" class="border02" type="number" min="0" max="10000" disabled="true">
+					</div>
+			</div>
+			<!-- taxa  -->
+
+			<!-- precoTotal  -->			
+			<div class="mg-left tpBuilding">
+				<div class="mg-bottom">					
+					<div class="border01">
+						<p>preco Total</p>
+						</div>
+						<input id="precoTotal" name="numberBus01" class="border02" type="number" min="0" max="10000" disabled="true">
+					</div>
+			</div>
+			<!-- precoTotal  -->
+			
+
+
 			<div class="mg-left command">
 				<h3>Our Prices</h3>
 				
@@ -564,7 +610,7 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
-		<script src="assets/js/quote.js"></script>
+		<script src="assets/js/quote.1.js"></script>
 		
 		<!-- STYLESWITCHER - REMOVE -->
 		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>

@@ -1,5 +1,5 @@
 
-/*Formulaire Soumission*/
+/* submission form */
 
 .width500{ 
     width: 100%;
@@ -11,7 +11,7 @@
 }
 
 .border01{
-   float: left;
+  float: left;
 	border: 1px solid black;
 	padding: 15px;
 	width: 40%;
@@ -26,6 +26,17 @@
 	height: 54px;
 	border: 1px solid black;
 }
+
+.command{
+  margin-bottom: 50px;
+  width: 40%;
+}
+
+.command01{
+  border: 1px solid back;
+  width: 90%;
+}
+
 
 #residential{
   margin-bottom: 50px;
@@ -42,6 +53,29 @@
 .mg-bottom{
   margin-bottom: 10px;
 }
+
+.wd-40{
+  width: 15%;
+}
+
+#amount{
+  float: right;
+ }
+
+.mg-00{
+  margin: 0;
+}
+
+#rates{
+  text-align: right;
+  width: 50%;
+}
+
+
+
+
+
+
 
 
 
@@ -86,4 +120,4 @@ td{padding: 0.2em 2em 0.2em 0;}
 }
 
 
-/* /Formulaire Soumission */
+/* /submission form */
