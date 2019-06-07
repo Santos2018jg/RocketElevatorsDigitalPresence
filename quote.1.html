@@ -1,656 +1,1305 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Rocket Elevators</title>
-		<meta name="description" content="" />
-		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
-
-		<link rel="icon" type="image/png" href="assets/images/R2.png" />
-
-		<!-- mobile settings -->
-		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
-		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-
-		<!-- WEB FONTS : use %7C instead of | (pipe) -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
-
-		<!-- CORE CSS -->
-		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-		<!-- REVOLUTION SLIDER -->
-		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
-
-		<!-- THEME CSS -->
-		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-
-		<!-- PAGE LEVEL SCRIPTS -->
-		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
-	</head>
-
-	<!--
-		AVAILABLE BODY CLASSES:
-		
-		smoothscroll 			= create a browser smooth scroll
-		enable-animation		= enable WOW animations
-
-		bg-grey					= grey background
-		grain-grey				= grey grain background
-		grain-blue				= blue grain background
-		grain-green				= green grain background
-		grain-blue				= blue grain background
-		grain-orange			= orange grain background
-		grain-yellow			= yellow grain background
-		
-		boxed 					= boxed layout
-		pattern1 ... patern11	= pattern background
-		menu-vertical-hide		= hidden, open on click
-		
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="assets/images/_smarty/boxed_background/1.jpg"
-	-->
-	<body class="smoothscroll enable-animation">
-
-		
-			<!-- 
-				AVAILABLE HEADER CLASSES
-
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-				
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent b-0"
-			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
-
-				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="container">
-
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
-
-						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
-							<img src="assets/images/R2.png" alt="Logo Rocket Elevators" />
-						</a>
-
-						<!-- 
-							Top Nav 
-							
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
-						-->
-						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-							<nav class="nav-main">
-
-								<!-- 
-									.nav-onepage
-									Required for onepage navigation links
-									
-									Add .external for an external link!
-								-->
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="index-onepage-construction01-Copie.1.html">
-											HOME
-										</a>
-									</li>
-									<li class="nav-item dropdown"><!-- SERVICES -->
-											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES	</a>
-											<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											  <a class="dropdown-item" href="residential.html">RESIDENTIAL</a>
-											  <a class="dropdown-item" href="corporate.html">CORPORATE</a>
-										</div>
-									</li>
-									<li><!-- PORTFOLIO -->
-										<a href="index-onepage-construction01-Copie.1.html#work">
-											PORTFOLIO
-										</a>
-									</li>
-									<li><!-- NEWS -->
-										<a href="index-onepage-construction01-Copie.1.html#news">
-											NEWS
-										</a>
-									</li>
-									<li><!-- CLIENTS -->
-										<a href="index-onepage-construction01-Copie.1.html#clients">
-											CLIENTS
-										</a>
-									</li>
-									<li><!-- RESIDENTIAL BUILDINGS -->
-										<a href="residential.html">
-											RESIDENTIAL
-										</a>
-									</li>
-									<li><!-- CORPORATE BUILDINGS -->
-										<a href="corporate.html">
-											CORPORATE
-										</a>
-									</li>
-									<li><!-- REQUEST QUOTE -->
-										<a href="quote.html">
-											REQUEST QUOTE
-										</a>
-									</li>
-									<li><!-- CONTACT -->
-										<a href="index-onepage-construction01-Copie.1.html#contact">
-											CONTACT
-										</a>
-									</li>
-								</ul>
-
-							</nav>
-						</div>
-
-					</div>
- 				</header>
-				<!-- /Top Nav -->
-			</div>
-
-			<div class="mg-left tpBuilding" >
-				<label for="typeBuilding">What type of building do you have?</label>
-				<select id="typeBuilding">
-					<option value="None" > -- Select --</option>
-					<option value="Residential" >Residential</option>
-					<option value="Commercial">Commercial</option>
-					<option value="Corporate">Corporate</option>
-					<option value="Hybrid">Hybrid</option>
-				</select>
-			</div>
-
-			<!-- Residential -->
-			<div id="residential" class="mg-left mg-bottom">
-				<div class="mg-bottom">
-					<h3>Residential</h3>
-					<div class="border01">
-						<p>How many apartments? *</p>
-					</div>
-					<input id="numberApp" name="numberApp" class="border02 residentialInput" type="number"  min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-
-				</div>
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How many floor? </p>
-					</div>
-					<input id="numberFloor" name="numberFloor" class="border02 residentialInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-
-				</div>
-
-				<div>
-					<p  class="border01">How many basement? *</p>
-					<input id="numberBas" name="numberBas" class="border02 residentialInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-			</div>
-			<!-- Residential -->
-
-			<!-- Commercial -->			
-			<div id="commercial" class="mg-left tpBuilding">
-				<div class="mg-bottom">
-					<h3>Commercial</h3>
-					<div class="border01">
-						<p>How Many Separate Businesses? *</p>
-						</div>
-						<input id="numberBus" name="numberBus"  type="number" min="0" max="10000" class="border02" onkeyup="CalcCom()" onchange="CalcCom()" oninput="validity.valid||(value='')" ;="">
-					</div>
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How many floor? *</p>
-					</div>
-					<input id="numberFloor01" name="numberFloor01" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How many basement? *<p>
-					</div>
-					<input id="numberBas01" name="numberBas01" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How Many Parking? *</p>
-					</div>
-					<input id="numberPar" name="numberPar" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How Many Lift Cages To Deploy? *</p>
-					</div>
-					<input id="numberCag" name="numberCag" class="border02" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-			</div>
-			<!-- Commercial -->
-
-			<!-- Corporate -->			
-			<div id="corporate" class="mg-left tpBuilding">
-				<div class="mg-bottom">
-					<h3>Corporate</h3>
-					<div class="border01">
-						<p>How Many separate tenant companies? *?</p>
-						</div>
-						<input id="numbTen" name="numberTen" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-					</div>
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How many floor? *</p>
-					</div>
-					<input id="numberFloor02" name="numberFloor02" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How many basement? *</p>
-					</div>
-					<input id="numberBas02" name="numberBas02" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How Many Parking? *</p>
-					</div>
-					<input id="numberPar01" name="numberPar01" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>What Is The Maximum Number Of Occupants Per Floor? *</p>
-					</div>
-					<input id="numberOcc" name="numberOcc" class="border02 corporateInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-			</div>
-			<!-- Corporate -->
-
-			<!-- Hybrid  -->			
-			<div id="hybrid" class="mg-left tpBuilding">
-				<div class="mg-bottom">
-					<h3>Hybrid</h3>
-					<div class="border01">
-						<p>How Many Separate Businesses? *?</p>
-						</div>
-						<input id="numberBus01" name="numberBus01" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-					</div>
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How many floor? *</p>
-					</div>
-					<input id="numberFloor03" name="numberFloor03" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How many basement? *</p>
-					</div>
-					<input id="numberBas03" name="numberBas03" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>How Many Parking? *</p>
-					</div>
-					<input id="numberPar01" name="numberPar01" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>numberOcc01? *</p>
-					</div>
-					<input id="numberOcc01" name="numberOcc01" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-				<div class="mg-bottom">
-					<div class="border01">
-						<p>H24hing? *</p>
-					</div>
-					<input id="numberhr" name="numberhr" class="border02 HybridInput" type="number" min="0" max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
-				</div>
-
-			</div>
-			<!-- Hybrid  -->
-
-			<!-- cageElevators  -->			
-			<div class="mg-left tpBuilding">
-				<div class="mg-bottom">					
-					<div class="border01">
-						<p>cage Elevators</p>
-						</div>
-						<input id="cageElevators" name="numberBus01" class="border02" type="number" min="0" max="10000" disabled="true">
-					</div>
-			</div>
-			<!-- cageElevators  -->
-			
-			<!-- radio button  -->
-			<form class="mg-left">
-				<input type="radio" name="building" value="standard" id="standard" >Standard<br>
-				<input type="radio" name="building" value="premium" id="premium" >Premium<br>
-				<input type="radio" name="building" value="excelium" id="excelium" >Excelium<br>
-			</form> 
-			<!-- radio button  -->
-
-			<!-- taxa  -->			
-			<div class="mg-left tpBuilding">
-				<div class="mg-bottom">					
-					<div class="border01">
-						<p>taxa</p>
-						</div>
-						<input id="taxa" name="numberBus01" class="border02" type="number" min="0" max="10000" disabled="true">
-					</div>
-			</div>
-			<!-- taxa  -->
-
-			<!-- precoTotal  -->			
-			<div class="mg-left tpBuilding">
-				<div class="mg-bottom">					
-					<div class="border01">
-						<p>preco Total</p>
-						</div>
-						<input id="precoTotal" name="numberBus01" class="border02" type="number" min="0" max="10000" disabled="true">
-					</div>
-			</div>
-			<!-- precoTotal  -->
-			
-
-
-			<div class="mg-left command">
-				<h3>Our Prices</h3>
-				
-					<h4 class="mg-00">Total Elevators:</h4>
-
-					<p id="totElev" class="float-right">0</p>
-					<input id="TotElevators" name="numberCage" type="hidden" value="0">
-					
-					<p class="mg-00">Installation Fees:</p>
-					
-					<h5 class="mg-00" id="rates">10%</h5>
-
-					<h3 class="mg-00 float-left">TOTAL</h3>
-
-					<input id="amount" name="TotPrices" type="hidden" value="">
-					<p class="float-right wd-40" id="amounts">0.00$</p>
-
-					<input class="command01" type="text" name="Full_Name" placeholder="Full Name" required=""><br>
-					<input class="command01"type="text" name="Company_Name" placeholder="Company Name"><br>
-					<input class="command01"type="email" name="Email"  placeholder="Email" required=""><br>
-					<input class="command01"type="text" name="Phone_Number" placeholder="Phone Number" required=""><br>
-					<button type="submit" >Send your quote</button>
-				
-			</div>
-
-
-
-
-
-
-
-
-				
-
-
-			
-				<!-- 
-				
-				
-				<div class="mg-left">
-					<h3>Residential</h3>
-					<div class="border01">
-					<label  for="residential">How many apartments does the building offer?</label></div>
-					<input class="border02" id="residential" type="number" name="qty" value="1">
-					<button id="calculate">Calculer</button><br />
-				
-				
-					<label class="border01" for="residential">Which number of floors in the building?</label>
-					<input class="border02" id="residential01" type="number" name="qty" value="1">
-					<button id="calculate01">Calculer</button><br />
-
-					<label class="border01" for="residential">What number of basements the building contains?</label>
-					<input class="border02" id="residential02" type="number" name="qty" value="1">
-					<button id="calculate02">Calculer</button><br />
-
-				</div>
-
-				<div class="mg-left">
-					<h3>Commercial</h3>
-					<div class="border01">
-					<label  for="commercial">How many apartments does the building offer?</label></div>
-					<input class="border02" id="commercial" type="number" name="commercial" value="1">
-					<button id="calculate">Calculer</button><br />
-				
-				
-					<label class="border01" for="commercial">Which number of floors in the building?</label>
-					<input class="border02" id="commercial01" type="number" name="qty" value="1">
-					<button id="calculate01">Calculer</button><br />
-
-					<label class="border01" for="commercial">What number of basements the building contains?</label>
-					<input class="border02" id="commercial02" type="number" name="qty" value="1">
-					<button id="calculate02">Calculer</button><br />
-				</div>
-
-				<div class="mg-left">
-					<h3>Corporate</h3>
-					<div class="border01">
-					<label  for="corporate">How many apartments does the building offer?</label></div>
-					<input class="border02" id="corporate" type="number" name="corporate" value="1">
-					<button id="calculate">Calculer</button><br />
-				
-				
-					<label class="border01" for="corporate">Which number of floors in the building?</label>
-					<input class="border02" id="corporate01" type="number" name="corporate" value="1">
-					<button id="calculate01">Calculer</button><br />
-
-					<label class="border01" for="corporate">What number of basements the building contains?</label>
-					<input class="border02" id="corporate" type="number" name="corporate" value="1">
-					<button id="calculate02">Calculer</button><br />
-				</div>
-
-				<div class="mg-left">
-					<h3>Hybrid</h3>
-					<div class="border01">
-					<label  for="hybrid">How many apartments does the building offer?</label></div>
-					<input class="border02" id="hybrid" type="number" name="hybrid" value="1">
-					<button id="calculate">Calculer</button><br />
-				
-				
-					<label class="border01" for="hybrid">Which number of floors in the building?</label>
-					<input class="border02" id="hybrid" type="number" name="hybrid" value="1">
-					<button id="calculate01">Calculer</button><br />
-
-					<label class="border01" for="hybrid">What number of basements the building contains?</label>
-					<input class="border02" id="hybrid" type="number" name="hybrid" value="1">
-					<button id="calculate02">Calculer</button><br />
-				</div>
-			
-
-				
-
-
-
-
-			<div>
-
-				
-			  <div class="product-order tiere mg-left">
-				<h3>Commande</h3>
-				<table>
-				  <tr><td>Sous-total :</td><td id="sub-total"></td></tr>
-				  <tr><td>Rabais :</td><td id="discount"></td></tr>
-				  <tr><td>Taxes :</td><td id="taxes"></td></tr>
-				  <tr><td>Livraison :</td><td id="shipping"></td></tr>
-				  <tr class="bold"><td>Total :</td><td id="total"></td></tr>
-				</table>
-				<button id="buy">Acheter</button>
-			  </div>
-			
-		  </div>
-
-		-->
-
-
-
-		  	
-				
-			
-				
-
-			
-
-
-
-
-		
-
-
-
-
-
-									
-
-
-			<!-- FOOTER -->
-			<footer id="footer">
-				<div class="container">
-
-
-					<div class="row">
-
-						<!-- col #1 -->
-						<div class="col-md-8">
-
-							<h3 class="letter-spacing-1">WHY US?</h3>
-
-							<!-- Small Description -->
-							<p>
-								Rocket Elevators was founded by industry experts to simplify the process of buying and installing an elevator in your home. With an increased awareness of residential and corporate elevators and an overwhelming majority of consumers who plan to purchase one, the need for a reliable and easy to use resource has never been greater.
-							</p>
-							<h2>(800) 123-4567</h2>
-						</div>
-						<!-- /col #1 -->
-
-						<!-- col #2 -->
-						<div class="col-md-4">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-
-							<!-- Newsletter Form -->
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
-							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-info" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-							<!-- /Newsletter Form -->
-
-
-						</div>
-						<!-- /col #2 -->
-
-					</div>
-
-
-				</div>
-
-				<div class="copyright">
-					<div class="container">
-						<ul class="float-right m-0 list-inline mobile-block">
-							<li><a href="#">Terms &amp; Conditions</a></li>
-							<li>&bull;</li>
-							<li><a href="#">Privacy</a></li>
-						</ul>
-						&copy; All Rights Reserved, Rocked Elevators LTD
-					</div>
-				</div>
-
-			</footer>
-			<!-- /FOOTER -->
-
-		
-
-
-		<!-- SCROLL TO TOP -->
-		<a href="#" id="toTop"></a>
-
-
-		<!-- PRELOADER -->
-		<div id="preloader">
-			<div class="inner">
-				<span class="loader"></span>
-			</div>
-		</div><!-- /PRELOADER -->
-
-
-		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
-		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-
-		<script src="assets/js/scripts.js"></script>
-		<script src="assets/js/quote.1.js"></script>
-		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
-
-		<!-- REVOLUTION SLIDER -->
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="assets/js/view/demo.revolution_slider.js"></script>
-
-		<!-- PAGELEVEL SCRIPTS -->
-		<script src="assets/js/contact.js"></script>
-
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="assets/plugins/gmaps.js"></script>
-		<script>
-
-			jQuery(document).ready(function(){
-
-				/**
-					@BASIC GOOGLE MAP
-				**/
-				var map2 = new GMaps({
-					div: '#map2',
-					lat: -12.043333,
-					lng: -77.028333,
-					scrollwheel: false
-				});
-
-				var marker = map2.addMarker({
-					lat: -12.043333,
-					lng: -77.028333,
-					title: 'Company, Inc.'
-				});
-
-			});
-
-		</script>
-	</body>
+
+ 
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Rocket Elevators</title>
+    <meta name="description" content="" />
+    <meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+    <link rel="icon" type="image/png" href="assets/images/R2.png" />
+
+    <!-- mobile settings -->
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"rel="stylesheet" type="text/css" />
+
+ 
+    <!-- CORE CSS -->
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+ 
+
+    <!-- REVOLUTION SLIDER -->
+
+    <link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+ 
+
+    <!-- PAGE LEVEL SCRIPTS -->
+
+    <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+</head>
+
+
+
+<!--
+
+        AVAILABLE BODY CLASSES:
+
+
+        smoothscroll            = create a browser smooth scroll
+
+        enable-animation        = enable WOW animations
+
+
+        bg-grey                 = grey background
+
+        grain-grey              = grey grain background
+
+        grain-blue              = blue grain background
+
+        grain-green             = green grain background
+
+        grain-blue              = blue grain background
+
+        grain-orange            = orange grain background
+
+        grain-yellow            = yellow grain background
+
+
+        boxed                   = boxed layout
+
+        pattern1 ... patern11   = pattern background
+
+        menu-vertical-hide      = hidden, open on click
+
+        
+
+        BACKGROUND IMAGE [together with .boxed class]
+
+        data-background="assets/images/_smarty/boxed_background/1.jpg"
+
+    -->
+
+ 
+
+<body class="smoothscroll enable-animation">
+
+ 
+
+    <!--
+
+                AVAILABLE HEADER CLASSES
+                Default nav height: 96px
+                .header-md      = 70px nav height
+                .header-sm      = 60px nav height
+                .b-0        = remove bottom border (only with transparent use)
+                .transparent    = transparent header
+                .translucent    = translucent header
+
+                .sticky         = sticky header
+
+                .static         = static header
+
+                .dark           = dark header
+
+                .bottom         = header on bottom
+
+                
+
+                shadow-before-1 = shadow 1 header top
+
+                shadow-after-1  = shadow 1 header bottom
+
+                shadow-before-2 = shadow 2 header top
+
+                shadow-after-2  = shadow 2 header bottom
+
+                shadow-before-3 = shadow 3 header top
+
+                shadow-after-3  = shadow 3 header bottom
+
+ 
+
+                .clearfix       = required for mobile menu, do not remove!
+
+ 
+
+                Example Usage:  class="clearfix sticky header-sm transparent b-0"
+
+            -->
+
+    <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+ 
+
+        <!-- TOP NAV -->
+
+        <header id="topNav">
+
+            <div class="container">
+
+ 
+
+                <!-- Mobile Menu Button -->
+
+                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+
+                    <i class="fa fa-bars"></i>
+
+                </button>
+
+ 
+
+                <!-- Logo -->
+
+                <a class="logo float-left scrollTo" href="#top">
+
+                    <img src="assets/images/R2.png" alt="Logo Rocket Elevators" />
+
+                </a>
+
+ 
+
+                <!--
+
+                            Top Nav
+
+                            
+
+                            AVAILABLE CLASSES:
+
+                            submenu-dark = dark sub menu
+
+                        -->
+
+                <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+
+                    <nav class="nav-main">
+
+ 
+
+                        <!--
+
+                                    .nav-onepage
+
+                                    Required for onepage navigation links
+
+                                    
+
+                                    Add .external for an external link!
+
+                                -->
+
+                        <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+
+                            <li class="active">
+
+                                <!-- HOME -->
+
+                                <a href="index-onepage-construction01-Copie.1.html">
+
+                                    HOME
+
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item dropdown">
+
+                                <!-- SERVICES -->
+
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                    <a class="dropdown-item" href="residential.html">RESIDENTIAL</a>
+
+                                    <a class="dropdown-item" href="corporate.html">CORPORATE</a>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <!-- PORTFOLIO -->
+
+                                <a href="index-onepage-construction01-Copie.1.html#work">
+
+                                    PORTFOLIO
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <!-- NEWS -->
+
+                                <a href="index-onepage-construction01-Copie.1.html#news">
+
+                                    NEWS
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <!-- CLIENTS -->
+
+                                <a href="index-onepage-construction01-Copie.1.html#clients">
+
+                                    CLIENTS
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <!-- RESIDENTIAL BUILDINGS -->
+
+                                <a href="residential.html">
+
+                                    RESIDENTIAL
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <!-- CORPORATE BUILDINGS -->
+
+                                <a href="corporate.html">
+
+                                    CORPORATE
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <!-- REQUEST QUOTE -->
+
+                                <a href="quote.1.html">
+
+                                    REQUEST QUOTE
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <!-- CONTACT -->
+
+                                <a href="index-onepage-construction01-Copie.1.html#contact">
+
+                                    CONTACT
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+ 
+
+                    </nav>
+
+                </div>
+
+ 
+
+            </div>
+
+        </header>
+
+        <!-- /Top Nav -->
+
+    </div>
+
+ 
+
+    <div class="mg-left tpBuilding">
+
+        <label for="typeBuilding">What type of building do you have?</label>
+
+        <select id="typeBuilding">
+
+            <option value="None"> -- Select --</option>
+
+            <option value="Residential">Residential</option>
+
+            <option value="Commercial">Commercial</option>
+
+            <option value="Corporate">Corporate</option>
+
+            <option value="Hybrid">Hybrid</option>
+
+        </select>
+
+    </div>
+
+ 
+
+    <!-- Residential -->
+
+    <div id="residential" class="mg-left mg-bottom">
+
+        <div class="mg-bottom">
+
+            <h3>Residential</h3>
+
+            <div class="border01">
+
+                <p>How many apartments? *</p>
+
+            </div>
+
+            <input id="numberApp" name="numberApp" class="border02 immeubleResidential" type="number" min="0"
+
+                max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+ 
+
+        </div>
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How many floor? </p>
+
+            </div>
+
+            <input id="numberFloor" name="numberFloor" class="border02 immeubleResidential" type="number" min="0"
+
+                max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+ 
+
+        </div>
+
+ 
+
+        <div>
+
+            <p class="border01">How many basement? *</p>
+
+            <input id="numberBas" name="numberBas" class="border02 immeubleResidential" type="number" min="0"
+
+                max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+    </div>
+
+    <!-- Residential -->
+
+ 
+
+    <!-- Commercial -->
+
+    <div id="commercial" class="mg-left tpBuilding">
+
+        <div class="mg-bottom">
+
+            <h3>Commercial</h3>
+
+            <div class="border01">
+
+                <p>How Many Separate Businesses? *</p>
+
+            </div>
+
+            <input id="numberBus" name="numberBus" type="number" min="0" max="10000" class="border02"
+
+                onkeyup="CalcCom()" onchange="CalcCom()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How many floor? *</p>
+
+            </div>
+
+            <input id="numberFloor01" name="numberFloor01" class="border02" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How many basement? *<p>
+
+            </div>
+
+            <input id="numberBas01" name="numberBas01" class="border02" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How Many Parking? *</p>
+
+            </div>
+
+            <input id="numberPar" name="numberPar" class="border02" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How Many Lift Cages To Deploy? *</p>
+
+            </div>
+
+            <input id="numberCag" name="numberCag" class="border02" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+    </div>
+
+    <!-- Commercial -->
+
+ 
+
+    <!-- Corporate -->
+
+    <div id="corporate" class="mg-left tpBuilding">
+
+        <div class="mg-bottom">
+
+            <h3>Corporate</h3>
+
+            <div class="border01">
+
+                <p>How Many separate tenant companies? *?</p>
+
+            </div>
+
+            <input id="numbTen" name="numberTen" class="border02 immeublecorporate" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How many floor? *</p>
+
+            </div>
+
+            <input id="numberFloor02" name="numberFloor02" class="border02 immeublecorporate" type="number" min="0"
+
+                max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How many basement? *</p>
+
+            </div>
+
+            <input id="numberBas02" name="numberBas02" class="border02 immeublecorporate" type="number" min="0"
+
+                max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How Many Parking? *</p>
+
+            </div>
+
+            <input id="numberPar01" name="numberPar01" class="border02 immeublecorporate" type="number" min="0"
+
+                max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>What Is The Maximum Number Of Occupants Per Floor? *</p>
+
+            </div>
+
+            <input id="numberOcc" name="numberOcc" class="border02 immeublecorporate" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+    </div>
+
+    <!-- Corporate -->
+
+ 
+
+    <!-- Hybrid  -->
+
+    <div id="hybrid" class="mg-left tpBuilding">
+
+        <div class="mg-bottom">
+
+            <h3>Hybrid</h3>
+
+            <div class="border01">
+
+                <p>How Many Separate Businesses? *?</p>
+
+            </div>
+
+            <input id="numberBus01" name="numberBus01" class="border02 immeubleHybrid" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How many floor? *</p>
+
+            </div>
+
+            <input id="numberFloor03" name="numberFloor03" class="border02 immeubleHybrid" type="number" min="0"
+
+                max="10000" onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How many basement? *</p>
+
+            </div>
+
+            <input id="numberBas03" name="numberBas03" class="border02 immeubleHybrid" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>How Many Parking? *</p>
+
+            </div>
+
+            <input id="numberPar01" name="numberPar01" class="border02 immeubleHybrid" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>numberOcc01? *</p>
+
+            </div>
+
+            <input id="numberOcc01" name="numberOcc01" class="border02 immeubleHybrid" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>H24hing? *</p>
+
+            </div>
+
+            <input id="numberhr" name="numberhr" class="border02 immeubleHybrid" type="number" min="0" max="10000"
+
+                onkeyup="CalcRes()" onchange="CalcRes()" oninput="validity.valid||(value='')" ;="">
+
+        </div>
+
+ 
+
+    </div>
+
+    <!-- Hybrid  -->
+
+ 
+
+    <!-- cageElevators  -->
+
+    <div class="mg-left tpBuilding">
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>cage Elevators</p>
+
+            </div>
+
+            <input id="cageElevators" name="numberBus01" class="border02" type="number" min="0" max="10000"
+
+                disabled="true">
+
+        </div>
+
+    </div>
+
+    <!-- cageElevators  -->
+
+ 
+
+    <!-- radio button  -->
+
+    <form class="mg-left">
+
+        <input type="radio" name="building" value="standard" id="idStandard">Standard<br>
+
+        <input type="radio" name="building" value="premium" id="idpremium">Premium<br>
+
+        <input type="radio" name="building" value="excelium" id="idexcelium">Excelium<br>
+
+    </form>
+
+    <!-- radio button  -->
+
+ 
+
+    <!-- taxa  -->
+
+    <div class="mg-left tpBuilding">
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>taxa</p>
+
+            </div>
+
+            <input id="taxa" name="numberBus01" class="border02" type="number" min="0" max="10000" disabled="true">
+
+        </div>
+
+    </div>
+
+    <!-- taxa  -->
+
+ 
+
+    <!-- precoTotal  -->
+
+    <div class="mg-left tpBuilding">
+
+        <div class="mg-bottom">
+
+            <div class="border01">
+
+                <p>preco Total</p>
+
+            </div>
+
+            <input id="precoTotal" name="numberBus01" class="border02" type="number" min="0" max="10000"
+
+                disabled="true">
+
+        </div>
+
+    </div>
+
+    <!-- precoTotal  -->
+
+
+
+
+    <div class="mg-left command">
+
+        <h3>Our Prices</h3>
+
+ 
+
+        <h4 class="mg-00">Total Elevators:</h4>
+
+ 
+
+        <p id="totElev" class="float-right">0</p>
+
+        <input id="TotElevators" name="numberCage" type="hidden" value="0">
+
+ 
+
+        <p class="mg-00">Installation Fees:</p>
+
+ 
+
+        <h5 class="mg-00" id="rates">10%</h5>
+
+ 
+
+        <h3 class="mg-00 float-left">TOTAL</h3>
+
+ 
+
+        <input id="amount" name="TotPrices" type="hidden" value="">
+
+        <p class="float-right wd-40" id="amounts">0.00$</p>
+
+ 
+
+        <input class="command01" type="text" name="Full_Name" placeholder="Full Name" required=""><br>
+
+        <input class="command01" type="text" name="Company_Name" placeholder="Company Name"><br>
+
+        <input class="command01" type="email" name="Email" placeholder="Email" required=""><br>
+
+        <input class="command01" type="text" name="Phone_Number" placeholder="Phone Number" required=""><br>
+
+        <button type="submit">Send your quote</button>
+
+ 
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+
+                
+
+                
+
+                <div class="mg-left">
+
+                    <h3>Residential</h3>
+
+                    <div class="border01">
+
+                    <label  for="residential">How many apartments does the building offer?</label></div>
+
+                    <input class="border02" id="residential" type="number" name="qty" value="1">
+
+                    <button id="calculate">Calculer</button><br />
+
+                
+
+                
+
+                    <label class="border01" for="residential">Which number of floors in the building?</label>
+
+                    <input class="border02" id="residential01" type="number" name="qty" value="1">
+
+                    <button id="calculate01">Calculer</button><br />
+
+ 
+
+                    <label class="border01" for="residential">What number of basements the building contains?</label>
+
+                    <input class="border02" id="residential02" type="number" name="qty" value="1">
+
+                    <button id="calculate02">Calculer</button><br />
+
+ 
+
+                </div>
+
+ 
+
+                <div class="mg-left">
+
+                    <h3>Commercial</h3>
+
+                    <div class="border01">
+
+                    <label  for="commercial">How many apartments does the building offer?</label></div>
+
+                    <input class="border02" id="commercial" type="number" name="commercial" value="1">
+
+                    <button id="calculate">Calculer</button><br />
+
+                
+
+                
+
+                    <label class="border01" for="commercial">Which number of floors in the building?</label>
+
+                    <input class="border02" id="commercial01" type="number" name="qty" value="1">
+
+                    <button id="calculate01">Calculer</button><br />
+
+ 
+
+                    <label class="border01" for="commercial">What number of basements the building contains?</label>
+
+                    <input class="border02" id="commercial02" type="number" name="qty" value="1">
+
+                    <button id="calculate02">Calculer</button><br />
+
+                </div>
+
+ 
+
+                <div class="mg-left">
+
+                    <h3>Corporate</h3>
+
+                    <div class="border01">
+
+                    <label  for="corporate">How many apartments does the building offer?</label></div>
+
+                    <input class="border02" id="corporate" type="number" name="corporate" value="1">
+
+                    <button id="calculate">Calculer</button><br />
+
+                
+
+                
+
+                    <label class="border01" for="corporate">Which number of floors in the building?</label>
+
+                    <input class="border02" id="corporate01" type="number" name="corporate" value="1">
+
+                    <button id="calculate01">Calculer</button><br />
+
+ 
+
+                    <label class="border01" for="corporate">What number of basements the building contains?</label>
+
+                    <input class="border02" id="corporate" type="number" name="corporate" value="1">
+
+                    <button id="calculate02">Calculer</button><br />
+
+                </div>
+
+ 
+
+                <div class="mg-left">
+
+                    <h3>Hybrid</h3>
+
+                    <div class="border01">
+
+                    <label  for="hybrid">How many apartments does the building offer?</label></div>
+
+                    <input class="border02" id="hybrid" type="number" name="hybrid" value="1">
+
+                    <button id="calculate">Calculer</button><br />
+
+                
+
+                
+
+                    <label class="border01" for="hybrid">Which number of floors in the building?</label>
+
+                    <input class="border02" id="hybrid" type="number" name="hybrid" value="1">
+
+                    <button id="calculate01">Calculer</button><br />
+
+ 
+
+                    <label class="border01" for="hybrid">What number of basements the building contains?</label>
+
+                    <input class="border02" id="hybrid" type="number" name="hybrid" value="1">
+
+                    <button id="calculate02">Calculer</button><br />
+
+                </div>
+
+            
+
+ 
+
+                
+
+
+
+
+
+            <div>
+
+ 
+
+                
+
+              <div class="product-order tiere mg-left">
+
+                <h3>Commande</h3>
+
+                <table>
+
+                  <tr><td>Sous-total :</td><td id="sub-total"></td></tr>
+
+                  <tr><td>Rabais :</td><td id="discount"></td></tr>
+
+                  <tr><td>Taxes :</td><td id="taxes"></td></tr>
+
+                  <tr><td>Livraison :</td><td id="shipping"></td></tr>
+
+                  <tr class="bold"><td>Total :</td><td id="total"></td></tr>
+
+                </table>
+
+                <button id="buy">Acheter</button>
+
+              </div>
+
+            
+
+          </div>
+
+ 
+
+        -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer id="footer">
+
+        <div class="container">
+
+ 
+
+            <div class="row">
+
+ 
+
+                <!-- col #1 -->
+
+                <div class="col-md-8">
+
+ 
+
+                    <h3 class="letter-spacing-1">WHY US?</h3>
+
+ 
+
+                    <!-- Small Description -->
+
+                    <p>
+
+                        Rocket Elevators was founded by industry experts to simplify the process of buying and
+
+                        installing an elevator in your home. With an increased awareness of residential and corporate
+
+                        elevators and an overwhelming majority of consumers who plan to purchase one, the need for a
+
+                        reliable and easy to use resource has never been greater.
+
+                    </p>
+
+                    <h2>(800) 123-4567</h2>
+
+                </div>
+
+                <!-- /col #1 -->
+
+ 
+
+                <!-- col #2 -->
+
+                <div class="col-md-4">
+
+                    <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+ 
+
+                    <!-- Newsletter Form -->
+
+                    <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+ 
+
+                    <form class="validate" action="php/newsletter.php" method="post"
+
+                        data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+
+                        <div class="input-group">
+
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+
+                            <input type="email" id="email" name="email" class="form-control required"
+
+                                placeholder="Enter your Email">
+
+                            <span class="input-group-btn">
+
+                                <button class="btn btn-info" type="submit">Subscribe</button>
+
+                            </span>
+
+                        </div>
+
+                    </form>
+
+                    <!-- /Newsletter Form -->
+
+ 
+
+                </div>
+
+                <!-- /col #2 -->
+
+ 
+
+            </div>
+
+ 
+
+        </div>
+
+ 
+
+        <div class="copyright">
+
+            <div class="container">
+
+                <ul class="float-right m-0 list-inline mobile-block">
+
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+
+                    <li>&bull;</li>
+
+                    <li><a href="#">Privacy</a></li>
+
+                </ul>
+
+                &copy; All Rights Reserved, Rocked Elevators LTD
+
+            </div>
+
+        </div>
+
+ 
+
+    </footer>
+
+    <!-- /FOOTER -->
+
+
+
+
+
+    <!-- SCROLL TO TOP -->
+
+    <a href="#" id="toTop"></a>
+
+ 
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+
+        <div class="inner">
+
+            <span class="loader"></span>
+
+        </div>
+
+    </div><!-- /PRELOADER -->
+
+ 
+
+    <!-- JAVASCRIPT FILES -->
+
+    <script>var plugin_path = 'assets/plugins/';</script>
+
+    <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+ 
+
+    <script src="assets/js/scripts.js"></script>
+
+    <script src="assets/js/quote.1.js"></script>
+
+ 
+
+    <!-- STYLESWITCHER - REMOVE -->
+
+    <script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+ 
+
+    <!-- REVOLUTION SLIDER -->
+
+    <script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+
+    <script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="assets/js/view/demo.revolution_slider.js"></script>
+
+ 
+
+    <!-- PAGELEVEL SCRIPTS -->
+
+    <script src="assets/js/contact.js"></script>
+
+ 
+
+    <!--
+
+            GMAP.JS
+
+            http://hpneo.github.io/gmaps/
+
+        -->
+
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+
+    <script src="assets/plugins/gmaps.js"></script>
+
+    <script>
+
+ 
+
+        jQuery(document).ready(function () {
+
+ 
+
+            /**
+
+                @BASIC GOOGLE MAP
+
+            **/
+
+            var map2 = new GMaps({
+
+                div: '#map2',
+
+                lat: -12.043333,
+
+                lng: -77.028333,
+
+                scrollwheel: false
+
+            });
+
+ 
+
+            var marker = map2.addMarker({
+
+                lat: -12.043333,
+
+                lng: -77.028333,
+
+                title: 'Company, Inc.'
+
+            });
+
+ 
+
+        });
+
+ 
+
+    </script>
+
+</body>
+
+ 
+
 </html>
+
+ 

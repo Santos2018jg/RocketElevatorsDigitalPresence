@@ -16,11 +16,10 @@
 	padding: 15px;
 	width: 40%;
   height: 54px;
-  
 }
 
-.border02{ 
-  width: 50px;
+.border02{
+  width: 100px;
 	margin-left: 15px;
 	text-align: center;
 	height: 54px;
@@ -60,7 +59,7 @@
 
 #amount{
   float: right;
- }
+}
 
 .mg-00{
   margin: 0;
@@ -70,31 +69,6 @@
   text-align: right;
   width: 50%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-.bouton{
-  text-decoration: none;
-  background-color: black;
-  color: white;
-  padding: 5px 10px;
-  margin-top: 30px;
-}
-
-.bouton:hover{
-  background-color: darkgray;
-}
-
 
 button{
   background-color: #1490c4;

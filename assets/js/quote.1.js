@@ -3,132 +3,111 @@
 //submission form
 
 $(function() {
-    $("#residential, #commercial, #corporate, #hybrid").hide();
-    
-	$('#typeBuilding').change(function(){
-			if($('#typeBuilding').val() == 'Residential') {
-					$('#residential').show(500);
-					clear();
-			} else {
-					$('#residential').hide();
-			}
-			if ($('#typeBuilding').val() == 'Commercial') {
-					$('#commercial').show(500);
-					clear();
-			} else {
-					$('#commercial').hide();
-			}
-			if($('#typeBuilding').val() == 'Corporate') {
-					$('#corporate').show(500);
-					clear();
-			} else {
-					$('#corporate').hide();
-			}
-			if($('#typeBuilding').val() == 'Hybrid') {
-					$('#hybrid').show(500);
-					clear();
-			} else {
-					$('#hybrid').hide();
-			}
+	$("#residential, #commercial, #corporate, #hybrid").hide();
 
-	});
+    $('#typeBuilding').change(function(){
+        if($('#typeBuilding').val() == 'None') {
+            $('#residential').hide();
+            $('#commercial').hide();
+            $('#corporate').hide();
+            $('#hybrid').hide();
+        }
+
+        if($('#typeBuilding').val() == 'Residential') {
+            $('#residential').show(500);
+            $('#commercial').hide();
+            $('#corporate').hide();
+            $('#hybrid').hide();
+        }
+
+        if($('#typeBuilding').val() == 'Commercial') {
+            $('#residential').hide();
+            $('#commercial').show(500);
+            $('#corporate').hide();
+            $('#hybrid').hide();
+        }
+
+        if($('#typeBuilding').val() == 'Corporate') {
+
+            $('#residential').hide();
+            $('#commercial').hide();
+            $('#corporate').show(500);
+            $('#hybrid').hide();
+        }
+
+        if($('#typeBuilding').val() == 'Hybrid') {
+            $('#residential').hide();
+            $('#commercial').hide();
+            $('#corporate').hide();
+            $('#hybrid').show(500);
+        }
+    });
 });
 
-// Residential
-$('.residentialInput').change(function(){
 
-	// Todo fazer o calculo 
-	var numberApp = parseInt($("#numberApp").val()); 
-	var numberFloor = parseInt($("#numberFloor").val()); // valor total de andares incluindo o subsolo
-	var numberBas = parseInt($("#numberBas").val()); // qdt de subsolo
+// ============ Hybrid ===========
 
-	var AverageApp =  Math.ceil(numberApp/(numberFloor - numberBas));
+$('.immeubleHybrid').change(function(){
+    var numberOcc01 = parseInt($("#numberOcc01").val());
+	var numberFloor03 = parseInt($("#numberFloor03").val());
+	var numberBas03 = parseInt($("#numberBas03").val());
+    var cageAscenseurCorporate = Math.ceil((numberFloor03 * numberOcc01) / 1000);
+    var numberColonnes = Math.ceil(numberFloor03 / 20);
+    var aux = cageAscenseurCorporate / numberColonnes;
+    var cageEstimatedCorporate = Math.ceil(aux);
+    var result = cageEstimatedCorporate * numberColonnes
 
-	var cageElev =  Math.ceil(AverageApp/6);
+	$("#cageElevators").val(Math.ceil(result));
 
-	var column = Math.ceil(numberFloor/20);
-
-	$("#cageElevators").val(cageElev*column);
 });
 
-// commercial
-$('#numberCag').change(function(){
-	$("#cageElevators").val($('#numberCag').val());
+
+// ================ standard ===========================
+
+$('#idStandard').click(function(){
+
+    var numberCag = $('#cageElevators').val();
+    var PriceElevator = parseInt(7565);
+    var percent = 0.10;
+    var taxa = numberCag * PriceElevator *percent;      
+    var total = numberCag * PriceElevator + taxa;       
+    $("#taxa").val((taxa).toFixed(2));
+    $("#precoTotal").val((total).toFixed(2));
 });
 
-// ===============================================================================================================================
 
-// corporate
-$('.corporateInput').change(function(){
 
-	
-	var numberOcc = parseInt($("#numberOcc").val()); 
-	var numberFloor02 = parseInt($("#numberFloor02").val()); // valor total de andares excluindo o subsolo
-	var numberBas02 = parseInt($("#numberBas02").val()); // qdt de subsolo
+// ============== premium ==================================
 
-// Todo: fazer o calculo 
+$('#idpremium').click(function(){
+    var numberCag = $('#cageElevators').val();
+    var PriceElevator = parseInt(12345);
+    var percent = 0.13;
+    var taxa = numberCag * PriceElevator * percent;     
+    var total = numberCag * PriceElevator + taxa;   
 
-	$("#cageElevators").val(numberOcc + numberFloor02 + numberBas02);
+	$("#taxa").val(taxa);
+
+    $("#precoTotal").val(total);
+
 });
 
-// ===============================================================================================================================
+// ========================================== excelium ========================================================================
 
-// Hybrid
-$('.HybridInput').change(function(){
 
-	
-	var numberOcc01 = parseInt($("#numberOcc01").val()); 
-	var numberFloor03 = parseInt($("#numberFloor03").val()); // valor total de andares excluindo o subsolo
-	var numberBas03 = parseInt($("#numberBas03").val()); // qdt de subsolo
 
-// Todo: fazer o calculo 
+$('#idexcelium').click(function(){
+    var numberCag = $('#cageElevators').val();
+    var PriceElevator = parseInt(15400);
+    var percent = 0.16;
+    var taxa = numberCag * PriceElevator * percent;     
+    var total = numberCag * PriceElevator + taxa;   
 
-	$("#cageElevators").val(numberOcc01 + numberFloor03 + numberBas03);
+    $("#taxa").val(taxa);
+
+    $("#precoTotal").val(total);
+
 });
-
-// ===============================================================================================================================
-
-// standard
-$('#standard').click(function(){
-	
-	var numberCag = $('#numberCag').val();
-
-
-// Todo: fazer o calculo 
-
-	$("#taxa").val(numberCag);
-	$("#precoTotal").val(numberCag);
-});
-
-// ===============================================================================================================================
-
-// premium
-$('#premium').click(function(){
-	
-	var numberCag = $('#numberCag').val();
-
-
-// Todo: fazer o calculo 
-
-	$("#taxa").val(numberCag);
-	$("#precoTotal").val(numberCag);
-});
-
-// ===============================================================================================================================
-
-// excelium
-$('#excelium').click(function(){
-	
-	var numberCag = $('#numberCag').val();
-
-
-// Todo: fazer o calculo 
-
-	$("#taxa").val(numberCag);
-	$("#precoTotal").val(numberCag);
-});
-
-// ===============================================================================================================================
 
 
 
